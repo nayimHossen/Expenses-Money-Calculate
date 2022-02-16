@@ -1,5 +1,11 @@
+function alertBox(message) {
+    document.getElementById("custom-alert").style.display = 'block';
+    const para = document.createElement("p");
+    para.innerHTML = message;
+    document.getElementById("error-message").appendChild(para);
+}
 
-function expensesTotal() {
+document.getElementById('expensesTotal').addEventListener('click', function () {
     const foodCost = document.getElementById("food-cost").value;
     const rantCost = document.getElementById("rant-cost").value;
     const clothesCost = document.getElementById("clothes-cost").value;
@@ -15,15 +21,16 @@ function expensesTotal() {
             document.getElementById('balance').innerText = remainingBalance;
         }
         else {
-            alert("You have to increase you earning")
+            alertBox("Expenses are more than your income.")
         }
     }
     else {
-        alert("Expenses demand a positive number value")
+        alertBox("The expenses input field deserve a positive number.")
     }
-}
+});
 
-function savingCalculation() {
+
+document.getElementById('savingCalculation').addEventListener('click', function () {
     const income = document.getElementById('income').value;
     const savingPercent = document.getElementById('saveIng-percent').value;
     const balance = document.getElementById('balance').innerText;
@@ -36,7 +43,7 @@ function savingCalculation() {
         document.getElementById('remaining-balance').innerText = remainingBalance;
     }
     else {
-        alert('you do not have money for save')
+        alertBox("Your saving money is greater than your balance.")
     }
+});
 
-}

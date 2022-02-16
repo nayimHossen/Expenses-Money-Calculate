@@ -13,3 +13,10 @@ body{
 h4, h5{
     color: rgb(34, 34, 61);
 }
+#custom-alert{
+    position: absolute;
+    top: 120px;
+    left: 30%;
+    width: 500px;
+    display: none;
+}
