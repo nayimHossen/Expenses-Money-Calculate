@@ -1,3 +1,4 @@
+
 function expensesTotal() {
     const foodCost = document.getElementById("food-cost").value;
     const rantCost = document.getElementById("rant-cost").value;
@@ -8,26 +9,34 @@ function expensesTotal() {
     if (foodCost >= 0 && rantCost >= 0 && clothesCost >= 0) {
         const newTotalCost = totalCost + '';
         document.getElementById("total-expenses").innerText = newTotalCost;
+
         if (income > 0 && income > totalCost) {
             const remainingBalance = income - totalCost;
             document.getElementById('balance').innerText = remainingBalance;
         }
         else {
-            alert("total cost is greater than income")
+            alert("You have to increase you earning")
         }
     }
     else {
-        alert("error")
+        alert("Expenses demand a positive number value")
     }
+}
 
-    // 
+function savingCalculation() {
+    const income = document.getElementById('income').value;
+    const savingPercent = document.getElementById('saveIng-percent').value;
+    const balance = document.getElementById('balance').innerText;
+    const percent = (savingPercent / 100) * income;
 
-    // if (income > 0 && totalCost > 0) {
+    if (balance > percent) {
+        document.getElementById('saving-amount').innerText = percent;
 
-    //     
-    // }
-    // else {
-    //     alert("pleas give a positive number")
-    // }
+        const remainingBalance = balance - percent;
+        document.getElementById('remaining-balance').innerText = remainingBalance;
+    }
+    else {
+        alert('you do not have money for save')
+    }
 
 }

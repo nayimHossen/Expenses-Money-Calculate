@@ -58,12 +58,14 @@
                             <h5>Balance: <span id="balance">0</span></h5>
                         </div>
                         <div class="text-center">
-                            <span>Save</span> : <input class="rounded border outline-primary py-2 w-25" type="number">
-                            <span>%</span> <button class="btn btn-primary px-5 py-2">Save</button>
+                            <span>Save</span> : <input id="saveIng-percent"
+                                class="rounded border outline-primary py-2 w-25" type="number">
+                            <span>%</span> <button onclick="savingCalculation()"
+                                class="btn btn-primary px-5 py-2">Save</button>
                         </div>
                         <div class="text-center my-3">
-                            <h5>Saving Amount: <span>0</span></h5>
-                            <h5>Remaining Balance: <span>0</span></h5>
+                            <h5>Saving Amount: <span id="saving-amount">0</span></h5>
+                            <h5>Remaining Balance: <span id="remaining-balance">0</span></h5>
                         </div>
                     </div>
                 </div>
