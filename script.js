@@ -45,7 +45,7 @@ function savingCalculation() {
     const savedAmount = document.getElementById('saving-amount').innerText = percent;
 
     //if saved amount is greater than balance
-    if (balance > savedAmount) {
+    if (balance >= savedAmount) {
         document.getElementById('saving-amount').innerText = percent;
         const remainBalance = balance - percent;
         document.getElementById('remaining-balance').innerText = remainBalance;
