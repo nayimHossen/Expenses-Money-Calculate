@@ -6,6 +6,9 @@ function alertMassage(message) {
     document.getElementById("error-message").appendChild(para);
 }
 
+function pageReload() {
+    location.reload();
+}
 //expenses total calculation area
 function expensesTotal() {
     const income = document.getElementById('income').value;
@@ -18,7 +21,7 @@ function expensesTotal() {
     if (foodCost >= 0 && rantCost >= 0 && clothesCost >= 0 && income >= 0) {
 
         //if total expenses is greater than income
-        if (income > totalCost) {
+        if (income >= totalCost) {
             document.getElementById("total-expenses").innerText = totalCost;
             const remainingBalance = income - totalCost;
             document.getElementById('balance').innerText = remainingBalance;

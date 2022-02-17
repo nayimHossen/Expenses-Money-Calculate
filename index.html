@@ -10,6 +10,8 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- custom css style Link -->
     <link rel="stylesheet" href="style.css">
+    <!-- font awesome icon cdn -->
+    <script src="https://kit.fontawesome.com/94afb7bdb2.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
     <title>Calculate | Money</title>
 </head>
@@ -19,7 +21,7 @@
         <section class="container">
             <!-- website title name -->
             <div class="d-flex justify-content-center mb-3">
-                <h1 class="fw-bold" style="color: rgb(38, 38, 107);">Expenses Money Calculate</h1>
+                <h2 class="fw-bold" style="color: rgb(38, 38, 107);">Expenses Money Calculate💰</h2>
             </div>
 
             <!-- bootstrap row -->
@@ -38,7 +40,7 @@
                         <div class="row mb-3">
                             <label for="" class="col-sm-2 col-form-label">Income :</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="income">
+                                <input type="number" class="form-control" id="income" placeholder="enter your salary">
                             </div>
                         </div>
 
@@ -47,19 +49,21 @@
                         <div class="row mb-3">
                             <label for="" class="col-sm-2 col-form-label">Food :</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="food-cost">
+                                <input type="number" class="form-control" id="food-cost" placeholder="enter food cost">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="" class="col-sm-2 col-form-label">Rant :</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="rant-cost">
+                                <input type="number" class="form-control" id="rant-cost"
+                                    placeholder="enter your rant cost">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="" class="col-sm-2 col-form-label" required>Clothes :</label>
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" id="clothes-cost">
+                                <input type="number" class="form-control" id="clothes-cost"
+                                    placeholder="enter your clothes cost">
                             </div>
                         </div>
 
@@ -78,7 +82,8 @@
                         <!-- saving money calculation div -->
                         <div class="text-center">
                             <span>Save</span> : <input id="saveIng-percent"
-                                class="rounded border outline-primary py-2 w-25" type="number">
+                                class="rounded border outline-primary py-2 w-25" type="number"
+                                placeholder="saving percent">
                             <span>%</span> <button onclick="savingCalculation()"
                                 class="btn btn-primary px-5 py-2">Save</button>
                         </div>
@@ -98,7 +103,8 @@
             <div id="custom-alert">
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <div id="error-message"></div>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+                        onclick="pageReload()"></button>
                 </div>
             </div>
 
